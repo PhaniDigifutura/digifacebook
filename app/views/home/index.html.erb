@@ -1,0 +1,12 @@
+<h1>Home#index</h1>
+<p>Sign in with facebook</p>
+  <% if current_user %>
+    Signed in as <strong><%= current_user.email %></strong>!
+    <%= link_to "Sign out", signout_path %>
+    <%= link_to 'Tasks', facebook_tasks_path %>
+  <% else %>
+    <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+    <p> Sign in normally </p>
+
+<%= link_to 'Tasks', tasks_path %>
+  <% end %>

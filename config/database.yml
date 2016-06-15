@@ -1,0 +1,10 @@
+development: &default
+  adapter: mysql2
+  encoding: utf8
+  database: facebook
+  username: root
+  password: root
+  host: 127.0.0.1
+
+production:
+  <<: *default  
